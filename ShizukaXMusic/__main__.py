@@ -23,7 +23,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("ShizukaXMusic").error("Add Pyrogram string session and then try...")
+        LOGGER("Salaarserver").error("Add Pyrogram string session and then try...")
     try:
         users = await get_gbanned()
         for user_id in users:
@@ -40,19 +40,19 @@ async def init():
     await userbot.start()
     await Shizuka.start()
     try:
-        await Shizuka.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await Shizuka.stream_call("https://graph.org/file/b433d10185474697c8a9c.jpg")
     except NoActiveGroupCall:
-        LOGGER("ShizukaXMusic").error(
+        LOGGER("Salaarserver").error(
             "[ERROR] - \n\nTurn on group voice chat and don't put it off otherwise I'll stop working thanks."
         )
         sys.exit()
     except:
         pass
     await Shizuka.decorators()
-    LOGGER("ShizukaXMusic").info("Music Bot Started Successfully")
+    LOGGER("Salaarserver").info("Music Bot Started Successfully")
     await idle()
 
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("ShizukaXMusic").info("Stopping Music Bot")
+    LOGGER("Salaarserver").info("Stopping Music Bot")
